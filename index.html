@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Purple Universe 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND DECORATION -->
+    <div class="stars" aria-hidden="true"></div>
+    <div id="floating-container" aria-hidden="true"></div>
+
+    <!-- PASSWORD SCREEN -->
+    <div id="password-gate" class="password-gate">
+        <div class="password-card" id="password-card">
+            <div class="password-lock">🔒</div>
+            <div class="small-label">A SECRET PURPLE UNIVERSE</div>
+
+            <h1>Welcome, ARMY Girl! 💜</h1>
+
+            <p class="password-subtitle">
+                A little birthday surprise is waiting for you.
+                Enter the secret password to continue.
+            </p>
+
+            <form id="password-form">
+                <div class="password-input-wrap">
+                    <input
+                        id="password-input"
+                        class="password-input"
+                        type="password"
+                        placeholder="Enter your secret password"
+                        autocomplete="off"
+                        aria-label="Secret password"
+                        required
+                    >
+
+                    <button
+                        class="password-show-button"
+                        type="button"
+                        id="toggle-password"
+                    >Show</button>
+                </div>
+
+                <button class="password-submit" type="submit">
+                    Unlock My Surprise ✨
+                </button>
+            </form>
+
+            <p id="password-error" class="password-error" role="alert"></p>
+            <p class="password-hint">Made with love, just for you. ♡</p>
+        </div>
+    </div>
+
+
+    <!-- PAGE 1: WELCOME -->
+    <section id="home-page" class="page active">
+        <div class="container home-container">
+
+            <div class="small-label">
+                A SPECIAL BIRTHDAY SURPRISE
+            </div>
+
+            <div class="main-heart">💜</div>
+
+            <h1 class="main-title">Happy Birthday!</h1>
+
+            <h2>To My Dearest Big Sister ✨</h2>
+
+            <!-- <p class="intro-text">
+                Welcome to your own little purple universe.
+                Someone has prepared something special just for you.
+            </p> -->
+
+            <div class="borahae">보라해 💜</div>
+
+            <p class="quote">
+                "You are my brightest star in this universe."
+            </p>
+
+            <button class="main-button" onclick="showSurprise()">
+               ✨ continue ✨
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 2: BIRTHDAY MESSAGE -->
+    <section id="surprise-page" class="page">
+        <div class="container">
+
+            <div class="small-label">
+                A LITTLE MESSAGE FROM MY HEART
+            </div>
+
+            <h1>Happy Birthday, Sister! 💜</h1>
+
+            <div class="letter-card">
+
+                <div class="letter-decoration">✦ ♡ ✦</div>
+
+                <p>Dear Big Sister,</p>
+
+                <p>
+                    မိသားစုရဲ့ ဘဝလေးကို ပိုပြီးလှပစေတဲ့ အစ်မရေ မွေးနေ့မှာ ပျော်ရွှင်ပါစေနော်။ ဒီနေ့လေးမှာ ပျော်ရွှင်မှုတွေ၊ ရယ်မောစရာတွေနဲ့ ချစ်ခြင်းမေတ္တာတွေ အပြည့်ရှိပြီး မမေ့နိုင်တဲ့ အမှတ်တရလေးတွေလည်း အများကြီး ပိုင်ဆိုင်နိုင်ပါစေ။ 💜
+                </p>
+
+                <p id="hidden-message" class="hidden-message">
+                    ခရီးတွေအများကြီးတူတူသွားရအောင်လို့ အများကြီးကျန်းမာအောင်နေပါ💜
+                </p>
+
+                <p class="letter-end">
+                    ချစ်ခြင်းများစွာဖြင့်  stella ♡
+                </p>
+
+            </div>
+
+            <button onclick="revealMessage()" id="message-button">
+                Read More 💌
+            </button>
+
+            <button onclick="showGallery()">
+                Continue to Memories ➜
+            </button>
+
+            <button class="secondary-button" onclick="goHome()">
+                Back Home
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 3: PHOTO MEMORIES -->
+    <section id="gallery-page" class="page">
+        <div class="container">
+
+            <div class="small-label">
+                OUR LITTLE COLLECTION OF MEMORIES
+            </div>
+
+            <h1>Beautiful Memories ✨</h1>
+
+            <p>
+                Every picture tells a story.
+                Here are some moments worth remembering. 💜
+            </p>
+
+            <div class="gallery">
+
+                <div class="photo-card">
+                    <img src="images/1.jpg" alt="Memory one">
+                    <p>Memory One ♡</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/2.jpg" alt="Memory two">
+                    <p>Memory Two ♡</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/3.jpg" alt="Memory three">
+                    <p>Memory Three ♡</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/4.jpg" alt="Memory four">
+                    <p>Memory Four ♡</p>
+                </div>
+
+            </div>
+
+
+            <!-- BIRTHDAY VIDEO SECTION -->
+            <div class="video-section">
+
+                <div class="video-icon">🎬</div>
+
+                <h2>A Special Birthday Video For You!</h2>
+
+                <p>
+                    I have prepared a little video just for you,
+                    my lovely big sister.
+                </p>
+
+                <p>
+                    Are you ready for your surprise? 🎂🎈
+                </p>
+
+                <button onclick="openVideoSurprise()">
+                    Watch Your Birthday Video 🎀
+                </button>
+
+
+                <!-- VIDEO PLAYER -->
+                <div id="birthday-video-box" class="video-box">
+
+                    <h2>Happy Birthday, Big Sister! 💜</h2>
+
+                    <p>
+                        Enjoy this little surprise made with love.
+                    </p>
+
+                    <video
+                        id="birthday-video"
+                        controls
+                        playsinline
+                        preload="metadata">
+
+                        <source
+                            src="videos/1.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+                    <button onclick="replayVideo()">
+                        Replay Video 🔄
+                    </button>
+
+                    <button
+                        class="secondary-button"
+                        onclick="closeBirthdayVideo()">
+                        Close Video
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+            <div class="navigation-buttons">
+
+                <button onclick="showMysteryPage()">
+                    Discover Three Mystery Gifts 🎁
+                </button>
+
+                <button class="secondary-button" onclick="goSurprise()">
+                    Back
+                </button>
+
+                <button class="secondary-button" onclick="goHome()">
+                    Home
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 4: MYSTERY GIFTS -->
+    <section id="mystery-page" class="page">
+        <div class="container">
+
+            <div class="small-label">
+                A LITTLE MAGIC JUST FOR YOU
+            </div>
+
+            <h1>Choose Your Mystery Gift 🎁</h1>
+
+            <p>
+                Three little gifts are waiting for you.
+                Which one will you open first?
+            </p>
+
+            <div class="mystery-gifts">
+
+                <div class="mystery-card">
+                    <button
+                        class="gift-button"
+                        onclick="openMysteryGift(1)">🎁</button>
+
+                    <h3>Gift Number 1</h3>
+                    <p>A little surprise 💌</p>
+                </div>
+
+                <div class="mystery-card">
+                    <button
+                        class="gift-button"
+                        onclick="openMysteryGift(2)">🎁</button>
+
+                    <h3>Gift Number 2</h3>
+                    <p>Something special 🌙</p>
+                </div>
+
+                <div class="mystery-card">
+                    <button
+                        class="gift-button"
+                        onclick="openMysteryGift(3)">🎁</button>
+
+                    <h3>Gift Number 3</h3>
+                    <p>One last surprise 💜</p>
+                </div>
+
+            </div>
+
+            <p class="gift-hint">
+                ✨ Open each gift to discover its own video. ✨
+            </p>
+
+            <button class="secondary-button" onclick="goGallery()">
+                Back to Memories
+            </button>
+
+            <button class="secondary-button" onclick="goHome()">
+                Home
+            </button>
+
+        </div>
+
+
+        <!-- FULL-SCREEN GIFT VIDEO POPUP -->
+        <div id="gift-popup" class="gift-popup">
+
+            <div class="popup-content">
+
+                <button
+                    class="close-popup"
+                    onclick="closeGiftPopup()"
+                    aria-label="Close popup">✕</button>
+
+                <div class="popup-decoration">✦ ✧ ✦</div>
+
+                <div class="popup-gift" id="popup-gift">🎁</div>
+
+                <h2 id="result-title">
+                    Your Special Surprise!
+                </h2>
+
+                <p id="result-message"></p>
+
+                <video
+                    id="mystery-video"
+                    controls
+                    playsinline
+                    preload="metadata">
+
+                    <source
+                        id="mystery-video-source"
+                        src=""
+                        type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+                <p class="popup-footer">
+                    Made with love, just for you. 💜
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        Made with love for my big sister 💜
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
