@@ -239,7 +239,7 @@ const giftData = {
     1: {
         title: "Your First Little Surprise! 💌",
         message: "A little video made especially for you! 💜",
-        video: "videos/gift1.mp4"
+        video: "videos/1.mp4"
     },
 
     2: {
